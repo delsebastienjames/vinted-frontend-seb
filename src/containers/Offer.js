@@ -27,7 +27,7 @@ const Offer = () => {
   ) : (
     <div>
       <p>{data.product_name}</p>
-      {data.product_details.map((elem, index) => {
+      {data.product_details.map((elem) => {
         const keys = Object.keys(elem);
         return <p>{keys[0]}</p>;
       })}
