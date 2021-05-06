@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import "./index.css";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"; // BrowserRouter as Router permet de renommer BrowserRouter en (Route)
 
