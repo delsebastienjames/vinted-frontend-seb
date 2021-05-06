@@ -1,5 +1,7 @@
+import React from "react";
+
 const Offer = () => {
-  return;
+  return <div>Offer</div>;
 };
 
 export default Offer;
