@@ -27,7 +27,7 @@ const Home = () => {
   ) : (
     <div>
       {data.results.map((offer) => {
-        return <OfferCard key={Offer._id} offer={offer} />;
+        return <OfferCard key={offer._id} offer={offer} />;
         // <Link to={`/offer/${offer._id}`} key={offer._id}>
         //   <div className="air">
         //     <div>{offer.product_name}</div>
