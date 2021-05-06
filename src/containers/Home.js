@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import OfferCard from "../components/OfferCard";
 // import { Link } from "react-router-dom"; // permet de rendre clickable
-import Offer from "./Offer";
+import Offer from "../containers/Offer";
 
 const Home = () => {
   const [data, setData] = useState({});
