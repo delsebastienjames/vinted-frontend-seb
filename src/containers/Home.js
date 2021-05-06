@@ -22,16 +22,17 @@ const Home = () => {
       {data.results.map((offer, index) => {
         return (
           <div key={offer._id}>
-            <div>{offer.product_name}</div>
-            <div>{offer.product_description}</div>
-            {offer.product_price}
-
-            <div>
-              <img
-                style={{ height: 50 }}
-                src={offer.product_image.secure_url}
-                alt={data.product_name}
-              />
+            <div className="air">
+              <div>{offer.product_name}</div>
+              <div>{offer.product_description}</div>
+              {offer.product_price} €
+              <div>
+                <img
+                  style={{ height: 60 }}
+                  src={offer.product_image.secure_url}
+                  alt={data.product_name}
+                />
+              </div>
             </div>
           </div>
         ); // key très important (enlève également un warning du au .map)
