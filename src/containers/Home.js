@@ -10,7 +10,7 @@ const Home = () => {
       const response = await axios.get(
         "https://my-backend-vinted-seb.herokuapp.com/offers"
       );
-      console.log(response.data);
+      //console.log(response.data);
       setData(response.data);
       setIsLoading(false);
     };
@@ -23,16 +23,16 @@ const Home = () => {
       {data.results.map((offer, index) => {
         return (
           <Link to={`/offer/${offer._id}`} key={offer._id}>
-            <div className="air">
-              <div>{offer.product_name}</div>
-              <div>{offer.product_description}</div>
-              <div className="product_price">{offer.product_price} €</div>
-              <img
-                style={{ height: 70 }}
-                src={offer.product_image.secure_url}
-                alt={data.product_name}
-              />
-            </div>
+            {/* <div className="air"> */}
+            <div>{offer.product_name}</div>
+            <div>{offer.product_description}</div>
+            <div className="product_price">{offer.product_price} €</div>
+            <img
+              style={{ height: 70 }}
+              src={offer.product_image.secure_url}
+              alt={data.product_name}
+            />
+            {/* </div> */}
           </Link>
         ); // key très important (enlève également un warning du au .map)
       })}
