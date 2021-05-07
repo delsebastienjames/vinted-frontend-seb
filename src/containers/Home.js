@@ -30,16 +30,18 @@ const Home = () => {
         // key très important (enlève également un warning du au .map)
         return (
           <Link key={offer._id} to={`/offer/${offer._id}`}>
-            <div className="air">
-              <div>{offer.product_name}</div>
-              <div>{offer.product_description}</div>
-              <div className="product_price">{offer.product_price} €</div>
-              <img
-                style={{ height: 140 }}
-                src={offer.product_image.secure_url}
-                alt={data.product_name}
-              />
-            </div>
+            <span className="main">
+              <div className="air">
+                <div>{offer.product_name}</div>
+                <div>{offer.product_description}</div>
+                <div className="product_price">{offer.product_price} €</div>
+                <img
+                  style={{ height: 140 }}
+                  src={offer.product_image.secure_url}
+                  alt={data.product_name}
+                />
+              </div>
+            </span>
           </Link>
         );
       })}
