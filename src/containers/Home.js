@@ -21,6 +21,7 @@ const Home = () => {
     };
     fetchData();
   }, []);
+  // Ternaire
   return isLoading ? (
     <p>En cours de chargement ...</p>
   ) : (
