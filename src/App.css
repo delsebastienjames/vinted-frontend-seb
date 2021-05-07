@@ -9,6 +9,9 @@
 button {
   border: 1px solid tomato;
 }
+.main {
+  margin-bottom: 210px;
+}
 .air {
   max-width: 740px;
   margin: 0 auto;
