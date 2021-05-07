@@ -31,16 +31,19 @@ const Home = () => {
         return (
           <Link key={offer._id} to={`/offer/${offer._id}`}>
             <span className="main">
-              <div className="air">
-                <div>{offer.product_name}</div>
-                <div>{offer.product_description}</div>
-                <div className="product_price">{offer.product_price} €</div>
+              <p className="air">
                 <img
+                  className="picture"
                   style={{ height: 140 }}
                   src={offer.product_image.secure_url}
                   alt={data.product_name}
                 />
-              </div>
+                <p className="grey uppercase">{offer.product_name}</p>
+                <p className="grey fantasy">{offer.product_description}</p>
+                <p className="product_price">
+                  {offer.product_price} <span className="euro">€</span>
+                </p>
+              </p>
             </span>
           </Link>
         );
