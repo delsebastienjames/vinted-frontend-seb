@@ -9,8 +9,17 @@
 button {
   border: 1px solid tomato;
 }
+.under-text {
+  border: 1px solid brown;
+}
+.grey {
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: grey;
+}
 .main {
-  margin-bottom: 210px;
+  margin-bottom: 340px;
+  background-color: brown;
 }
 .air {
   max-width: 740px;
@@ -20,13 +29,53 @@ button {
   justify-content: space-around;
   border: 1px solid rgb(71, 200, 255);
   border-radius: 5px;
-  margin-top: 55px;
+  margin-top: 15px;
+  padding: 40px;
 }
+.air2 {
+  max-width: 250px;
 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border: 1px solid rgb(116, 147, 160);
+  border-radius: 5px;
+  margin-top: 15px;
+  padding: 40px;
+}
+.product_description {
+  background-color: brown;
+}
 .product_price {
-  margin-left: 15px;
+  padding-left: 15px;
+  font-weight: 700;
+  color: black;
+  margin-top: 14px;
 }
-
+.uppercase {
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-right: 15px;
+}
+.fantasy {
+  font-family: fantasy;
+  text-align: center;
+  margin-top: 14px;
+  text-transform: capitalize;
+  text-decoration: none;
+  list-style: none;
+}
+.picture {
+  border-radius: 15px;
+}
+.euro {
+  color: #a70b7b;
+}
+.marque {
+  font-weight: 800;
+  color: black;
+  font-size: 18px;
+}
 .header {
   display: flex;
   justify-content: center;
@@ -44,11 +93,9 @@ button {
   font-family: "Times New Roman", Times, serif;
   background-color: rgb(167, 11, 123);
   border: 1px solid rgb(90, 0, 128);
-  padding: 60px 0;
+  padding: 40px 0;
   color: white;
   bottom: 0;
-  width: 100%;
-  position: fixed;
 }
 
 .footer img {
