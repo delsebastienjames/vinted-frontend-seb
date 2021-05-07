@@ -31,6 +31,15 @@ const Offer = () => {
   ) : (
     <div>
       <p>{data.product_name}</p>
+      <p>{data.product_description}</p>
+      <p>{data.product_price} €</p>
+      <p>
+        <img
+          style={{ height: 540 }}
+          src={data.product_image.secure_url}
+          alt={data.product_name}
+        />
+      </p>
       {data.product_details.map((elem, index) => {
         const keys = Object.keys(elem);
         return <p>{keys[0]}</p>;
