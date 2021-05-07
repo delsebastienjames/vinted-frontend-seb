@@ -15,10 +15,9 @@ const Offer = () => {
         const response = await axios.get(
           `https://my-backend-vinted-seb.herokuapp.com/offer/${id}`
         );
-
         //console.log(response.data);
         setData(response.data);
-        setIsLoading(false);
+        setIsLoading(false); // pour afficher
       } catch (error) {
         console.log(error.message);
       }
@@ -35,14 +34,19 @@ const Offer = () => {
       <p>{data.product_price} €</p>
       <p>
         <img
-          style={{ height: 540 }}
+          style={{ height: 340 }}
           src={data.product_image.secure_url}
           alt={data.product_name}
         />
       </p>
       {data.product_details.map((elem, index) => {
-        const keys = Object.keys(elem);
-        return <p>{keys[0]}</p>;
+        const keys = Object.keys(elem); // tableau avec les clés de l'objet
+        // affichage des clés de l'objet et ses valeurs
+        return (
+          <p key={index}>
+            {keys[0]} {elem[keys[0]]}
+          </p>
+        );
       })}
     </div>
   );
