@@ -17,7 +17,9 @@ button {
   justify-content: space-around;
   border: 1px solid rgb(71, 200, 255);
   border-radius: 5px;
+  margin-top: 55px;
 }
+
 .product_price {
   margin-left: 15px;
 }
@@ -39,12 +41,11 @@ button {
   font-family: "Times New Roman", Times, serif;
   background-color: rgb(167, 11, 123);
   border: 1px solid rgb(90, 0, 128);
-  padding: 40px 0;
+  padding: 60px 0;
   color: white;
-  position: absolute;
   bottom: 0;
   width: 100%;
-  padding-top: 50px;
+  position: fixed;
 }
 
 .footer img {
