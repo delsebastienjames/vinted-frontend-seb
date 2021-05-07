@@ -10,14 +10,18 @@ const Offer = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      // requête axios
-      const response = await axios.get(
-        `https://my-backend-vinted-seb.herokuapp.com/offer/${id}`
-      );
+      try {
+        // requête axios
+        const response = await axios.get(
+          `https://my-backend-vinted-seb.herokuapp.com/offer/${id}`
+        );
 
-      //console.log(response.data);
-      setData(response.data);
-      setIsLoading(false);
+        //console.log(response.data);
+        setData(response.data);
+        setIsLoading(false);
+      } catch (error) {
+        console.log(error.message);
+      }
     };
     fetchData();
   }, [id]);
