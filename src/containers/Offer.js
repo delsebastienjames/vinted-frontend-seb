@@ -29,7 +29,7 @@ const Offer = () => {
   return isLoading ? (
     <p>En cours de chargement...</p>
   ) : (
-    <div>
+    <div className="air">
       <p>{data.product_name}</p>
       <p>{data.product_description}</p>
       <p>{data.product_price} €</p>
