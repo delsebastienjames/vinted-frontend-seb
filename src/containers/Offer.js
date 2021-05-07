@@ -29,22 +29,28 @@ const Offer = () => {
     <p>En cours de chargement...</p>
   ) : (
     <div className="air">
-      <p>{data.product_name}</p>
-      <p>{data.product_description}</p>
-      <p>{data.product_price} €</p>
-      <p>
-        <img
-          style={{ height: 340 }}
-          src={data.product_image.secure_url}
-          alt={data.product_name}
-        />
+      <p className="grey uppercase">{data.product_name}</p>
+      <p className="grey">{data.product_description}</p>
+      <p className="product_price">
+        {data.product_price} <span className="euro">€</span>
       </p>
+
+      <div className="air2">
+        <p>
+          <img
+            style={{ height: 290 }}
+            src={data.product_image.secure_url}
+            alt={data.product_name}
+          />
+        </p>
+      </div>
       {data.product_details.map((elem, index) => {
         const keys = Object.keys(elem); // tableau avec les clés de l'objet
         // affichage des clés de l'objet et ses valeurs
         return (
-          <p key={index}>
-            {keys[0]} {elem[keys[0]]}
+          <p className="grey" key={index}>
+            <span className="grey">{keys[0]}</span>
+            <p className="fantasy marque">{elem[keys[0]]}</p>
           </p>
         );
       })}
