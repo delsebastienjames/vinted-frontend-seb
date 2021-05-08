@@ -16,6 +16,7 @@ button {
   text-align: center;
   font-family: Georgia, "Times New Roman", Times, serif;
   color: grey;
+  font-size: 14px;
 }
 .main {
   margin-bottom: 340px;
@@ -34,7 +35,6 @@ button {
 }
 .air2 {
   max-width: 250px;
-
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -50,7 +50,7 @@ button {
   padding-left: 15px;
   font-weight: 700;
   color: black;
-  margin-top: 14px;
+  margin-top: 12px;
 }
 .uppercase {
   text-transform: uppercase;
