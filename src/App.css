@@ -263,6 +263,12 @@ button:hover {
     font-weight: 800;
     margin-left: 15px;
   }
+  .footer img {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 
 /*  *********************************************************** */
