@@ -263,8 +263,12 @@ button:hover {
     font-weight: 800;
     margin-left: 15px;
   }
+
   .footer img {
-    width: 120px;
+    width: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -413,4 +417,5 @@ button:hover {
   width: 10vw;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
