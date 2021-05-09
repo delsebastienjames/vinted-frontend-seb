@@ -38,7 +38,7 @@ const Offer = () => {
       <div className="air2">
         <p>
           <img
-            style={{ height: 290 }}
+            style={{ height: 190 }}
             src={data.product_image.secure_url}
             alt={data.product_name}
           />
