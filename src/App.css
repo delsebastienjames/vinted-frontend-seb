@@ -392,7 +392,7 @@ button:hover {
   color: #09b1ba;
 }
 .center {
-  margin: auto;
+  text-align: center;
 }
 .footer {
   display: flex;
