@@ -263,6 +263,9 @@ button:hover {
     font-weight: 800;
     margin-left: 15px;
   }
+  .footer img {
+    max-width: 120px;
+  }
 }
 
 /*  *********************************************************** */
