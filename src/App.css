@@ -1,3 +1,245 @@
+/********************************** CSS FORMULAIRE *******************************/
+
+/* Création de variables dans la pseudo-classe :root, pour éviter certaines répétitions en CSS. */
+
+:root {
+  --bg-primary: #4c76b5;
+  --bg-secondary: #7e90ab;
+  --bg-main: #eeebebe5;
+  --border-color: #b4bcc1;
+  --vinted-color: #09b1ba;
+}
+
+button {
+  font-family: "Times New Roman", Times, serif;
+}
+
+input,
+textarea {
+  margin: auto;
+  margin-bottom: auto;
+  font-family: "Times New Roman", Times, serif;
+  border: 1px solid var(--border-color);
+  width: 40vw;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 18px;
+  padding: 10px;
+  font-size: 16px;
+  outline: none;
+  color: rgb(40, 40, 40);
+  /* box-shadow: 6px 1px 15px rgb(252, 254, 255); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f000;
+}
+
+input {
+  height: 42px;
+}
+
+textarea {
+  height: 200px;
+}
+
+input[type="submit"] {
+  background-color: var(--bg-primary);
+  cursor: pointer;
+  width: 100%;
+  font-size: 22px;
+  height: 100%;
+  border-radius: 5px;
+  color: white;
+  background-color: #5b96fc92;
+  color: rgb(80, 80, 80);
+  width: 40vw;
+  margin: auto;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--bg-primary);
+  color: white;
+}
+
+button {
+  background-color: var(--bg-primary);
+  cursor: pointer;
+  font-size: 22px;
+  height: 100%;
+  border-radius: 5px;
+  color: white;
+  background-color: #5b96fc92;
+  color: rgb(80, 80, 80);
+  height: 42px;
+}
+
+button:hover {
+  background-color: var(--bg-primary);
+  color: white;
+}
+
+.form-inscrire {
+  border: 1px solid #09b1ba;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  width: 42vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.form-connecter {
+  border: 1px solid #09b1ba;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  width: 42vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+/* Media Queries */
+
+@media (max-width: 1024px) {
+  main {
+    /* width: auto; */
+    padding: 42px;
+    background-color: var(--bg-main);
+    border-radius: 10px;
+    margin: auto;
+    padding: 0 20px;
+  }
+  input[type="submit"] {
+    font-size: 20px;
+  }
+  /* button {
+        font-size: 20px;
+    } */
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  main {
+    padding: 42px;
+    background-color: var(--bg-main);
+    border-radius: 10px;
+    /* width: 500px; */
+    margin: auto;
+    width: 30vw;
+    /* padding: 0 20px; */
+  }
+  h1 {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 45px;
+    margin: 5px 0 45px 0;
+    color: rgb(56, 81, 106);
+    text-align: center;
+  }
+  input[type="submit"] {
+    font-size: 16px;
+  }
+  /* button {
+        font-size: 16px;
+    } */
+}
+
+@media (min-width: 300px) and (max-width: 767px) {
+  main {
+    padding: 42px;
+    background-color: var(--bg-main);
+    border-radius: 10px;
+    /* width: 500px; */
+    margin: auto;
+    width: 30vw;
+    /* padding: 0 20px; */
+  }
+
+  input,
+  textarea {
+    margin: auto;
+    margin-bottom: auto;
+    font-family: "Times New Roman", Times, serif;
+    border: 1px solid var(--border-color);
+    width: 40vw;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 18px;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    color: rgb(40, 40, 40);
+    /* box-shadow: 6px 1px 15px rgb(252, 254, 255); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f000;
+  }
+  h1 {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 45px;
+    margin: 5px 0 45px 0;
+    color: rgb(56, 81, 106);
+    text-align: center;
+  }
+  main ul {
+    display: none;
+  }
+  .hidden {
+    display: inherit;
+  }
+  main > input {
+    flex-direction: row;
+    align-items: center;
+  }
+  input[type="submit"] {
+    font-size: 12px;
+    line-height: 3vmin;
+  }
+  /* button {
+        font-size: 12px;
+        line-height: 3vmin;
+    } */
+
+  .air {
+    max-width: 740px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+  }
+  .product_price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .air2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .air2 img {
+    display: flex;
+    justify-content: center;
+  }
+  .uppercase {
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-left: 15px;
+  }
+}
+
+/*  *********************************************************** */
+
+/***************************************************************/
+
 .container {
   background-color: #d7dafc;
   width: 100vw;
@@ -6,7 +248,28 @@
   align-items: center;
   justify-content: center;
 }
-button {
+.inscrire {
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  color: #09b1ba;
+  margin: 15px;
+  padding: 10px;
+  border: 1px solid #09b1ba;
+  border-radius: 15px;
+  background-color: white;
+}
+.connecter {
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  color: #7a1303ad;
+  margin: 15px;
+  padding: 10px;
+  /* border: 1px solid #7a1303ad; */
+  border-radius: 15px;
+  background-color: white;
+}
+
+.button {
   border: 1px solid tomato;
 }
 .under-text {
@@ -16,11 +279,10 @@ button {
   text-align: center;
   font-family: Georgia, "Times New Roman", Times, serif;
   color: grey;
-  font-size: 14px;
+  /* font-size: 14px; */
 }
 .main {
-  margin-bottom: 340px;
-  background-color: brown;
+  margin-bottom: 150px;
 }
 .air {
   max-width: 740px;
@@ -28,20 +290,22 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  border: 1px solid rgb(71, 200, 255);
+  border: 1px solid rgb(143, 144, 145);
   border-radius: 5px;
   margin-top: 15px;
   padding: 40px;
+  box-shadow: 1px 3px 15px lightgray;
+  margin-bottom: 150px;
 }
 .air2 {
   max-width: 250px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  border: 1px solid rgb(116, 147, 160);
+  /* border: 1px solid rgb(116, 147, 160); */
   border-radius: 5px;
-  margin-top: 15px;
-  padding: 40px;
+  /* margin-top: 15px; */
+  padding: 10px;
 }
 .product_description {
   background-color: brown;
@@ -50,7 +314,9 @@ button {
   padding-left: 15px;
   font-weight: 700;
   color: black;
-  margin-top: 12px;
+  margin-top: 2px;
+  display: flex;
+  justify-content: center;
 }
 .uppercase {
   text-transform: uppercase;
@@ -60,42 +326,54 @@ button {
 .fantasy {
   font-family: fantasy;
   text-align: center;
-  margin-top: 14px;
+  margin-top: 2px;
   text-transform: capitalize;
   text-decoration: none;
   list-style: none;
 }
 .picture {
   border-radius: 15px;
+  margin: 30px;
 }
 .euro {
-  color: #a70b7b;
+  color: #909595;
 }
 .marque {
   font-weight: 800;
-  color: black;
+  color: #7a1303ad;
   font-size: 18px;
+  margin-top: 20px;
 }
 .header {
   display: flex;
   justify-content: center;
   font-size: 55px;
   font-family: "Times New Roman", Times, serif;
-  border: 1px solid teal;
+  /* border: 1px solid teal; */
   padding-bottom: 10px;
-  color: rgb(167, 11, 123);
+  color: #09b1ba;
+  margin-top: 25px;
 }
 
+.red {
+  color: crimson;
+}
+.vinted {
+  color: #09b1ba;
+}
 .footer {
   display: flex;
   justify-content: center;
   font-size: 25px;
   font-family: "Times New Roman", Times, serif;
-  background-color: rgb(167, 11, 123);
+  background-color: #09b1ba;
   border: 1px solid rgb(90, 0, 128);
   padding: 40px 0;
   color: white;
   bottom: 0;
+  position: fixed;
+  width: auto;
+  width: 100%;
 }
 
 .footer img {
