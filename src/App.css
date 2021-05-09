@@ -354,7 +354,7 @@ button:hover {
   margin-right: 15px;
 }
 .fantasy {
-  font-family: fantasy;
+  font-family: "Times New Roman", Times, serif;
   text-align: center;
   margin-top: 2px;
   text-transform: capitalize;
