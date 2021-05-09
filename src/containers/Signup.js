@@ -6,7 +6,7 @@ const Signup = ({ setUser }) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [checkbox, setCheckbox] = useState(false);
+  // const [checkbox, setCheckbox] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
   const history = useHistory();
@@ -63,13 +63,13 @@ const Signup = ({ setUser }) => {
           onChange={(event) => setPassword(event.target.value)} // event c'est un argument
         />
         <br />
-        <input
+        {/* <input
           className="center"
           type="checkbox"
           checked={checkbox}
           onChange={() => setCheckbox(!checkbox)}
         />
-        <br />
+        <br /> */}
         <span>{errorMessage}</span>
         <input type="submit" value="S'inscrire" />
       </form>
