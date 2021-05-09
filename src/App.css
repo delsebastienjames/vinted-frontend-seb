@@ -394,7 +394,10 @@ button:hover {
 .footer {
   display: flex;
   justify-content: center;
-  font-size: 25px;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  font-size: 21px;
   font-family: "Times New Roman", Times, serif;
   background-color: #09b1ba;
   border: 1px solid rgb(90, 0, 128);
@@ -410,4 +413,6 @@ button:hover {
   width: 100px;
   display: flex;
   justify-content: center;
+  align-content: center;
+  margin-top: 10px;
 }
