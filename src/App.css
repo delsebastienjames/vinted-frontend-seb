@@ -393,8 +393,8 @@ button:hover {
 }
 .footer {
   display: flex;
-  justify-content: space-evenly;
-  font-size: 20px;
+  justify-content: center;
+  font-size: 24px;
   font-family: "Times New Roman", Times, serif;
   background-color: #09b1ba;
   border: 1px solid rgb(90, 0, 128);
@@ -407,6 +407,8 @@ button:hover {
 }
 
 .footer img {
-  width: 200px;
-  min-height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
