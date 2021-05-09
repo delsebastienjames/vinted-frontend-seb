@@ -28,7 +28,9 @@ const Login = ({ setUser }) => {
       }
     } catch (error) {
       if (error.response.status === 401) {
-        setErrorMessage("Mauvais email et/ou mot de passe");
+        setErrorMessage(
+          <span className="vinted"> Mauvais email et/ou mot de passe </span>
+        );
       }
       console.log(error.message);
     }
