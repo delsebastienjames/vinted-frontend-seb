@@ -309,6 +309,7 @@ button:hover {
   font-family: Georgia, "Times New Roman", Times, serif;
   color: grey;
   /* font-size: 14px; */
+  margin: 2px;
 }
 .main {
   margin-bottom: 150px;
