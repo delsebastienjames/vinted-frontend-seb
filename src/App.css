@@ -410,5 +410,7 @@ button:hover {
 }
 
 .footer img {
-  max-width: 100px;
+  width: 10vw;
+  display: flex;
+  justify-content: center;
 }
