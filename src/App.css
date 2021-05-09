@@ -391,6 +391,9 @@ button:hover {
 .vinted {
   color: #09b1ba;
 }
+.center {
+  margin: auto;
+}
 .footer {
   display: flex;
   justify-content: center;
