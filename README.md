@@ -68,4 +68,19 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
 # vinted-frontend-seb
+
+mise à jour récente de Netlify:
+Remplacez :
+
+"build": "react-scripts build"
+
+Par :
+
+"build": "CI= react-scripts build"
+
+créer un fichier \_redirects dans le dossier public.
+Contenu du fichier public/\_redirects :
+
+/\* /index.html 200
