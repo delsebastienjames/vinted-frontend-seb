@@ -265,7 +265,7 @@ button:hover {
   }
 
   .footer img {
-    width: 10vw;
+    width: 30vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -414,7 +414,7 @@ button:hover {
 }
 
 .footer img {
-  width: 10vw;
+  width: 30vw;
   display: flex;
   justify-content: center;
   align-items: center;
