@@ -64,6 +64,7 @@ const Signup = ({ setUser }) => {
         />
         <br />
         <input
+          className="center"
           type="checkbox"
           checked={checkbox}
           onChange={() => setCheckbox(!checkbox)}
