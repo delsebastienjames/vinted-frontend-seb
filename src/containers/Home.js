@@ -29,8 +29,12 @@ const Home = () => {
       {data.results.map((offer) => {
         // key très important (enlève également un warning du au .map)
         return (
-          <Link key={offer._id} to={`/offer/${offer._id}`}>
-            <span className="main">
+          <Link
+            style={{ textDecoration: "none" }}
+            key={offer._id}
+            to={`/offer/${offer._id}`}
+          >
+            <div className="main">
               <p className="air">
                 <img
                   className="picture"
@@ -44,7 +48,7 @@ const Home = () => {
                   {offer.product_price} <span className="euro">€</span>
                 </p>
               </p>
-            </span>
+            </div>
           </Link>
         );
       })}
