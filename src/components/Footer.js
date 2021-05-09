@@ -5,10 +5,7 @@ const Footer = () => {
   return (
     <div className="footer">
       By Sébastien&nbsp;
-      <br />
-      <p>
-        <img src={leReacteurLogo} alt="LeReacteur logo" />
-      </p>
+      <img src={leReacteurLogo} alt="LeReacteur logo" />
     </div>
   );
 };
