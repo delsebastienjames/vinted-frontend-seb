@@ -6,6 +6,7 @@ import { Link } from "react-router-dom"; // permet de rendre clickable
 const Home = () => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -42,6 +43,7 @@ const Home = () => {
                   src={offer.product_image.secure_url}
                   alt={data.product_name}
                 />
+
                 <p className="grey uppercase">{offer.product_name}</p>
                 <p className="grey fantasy">{offer.product_description}</p>
                 <p className="product_price">
