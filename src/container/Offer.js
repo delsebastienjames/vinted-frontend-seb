@@ -5,7 +5,7 @@ import axios from "axios";
 const Offer = () => {
   const { id } = useParams(); // destructuring
   //console.log(id);
-  const [data, setData] = useState({});
+  const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
