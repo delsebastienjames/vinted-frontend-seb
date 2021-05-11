@@ -31,8 +31,8 @@ const Publish = ({ userToken }) => {
       formData.append("price", price);
 
       const response = await axios.post(
-        // "https://my-backend-vinted-seb.herokuapp.com/user/publish",
-        "http://localhost:3000/offer/publish",
+        "https://my-backend-vinted-seb.herokuapp.com/offer/publish",
+        // http://localhost:3000/offer/publish",
 
         formData,
         {
