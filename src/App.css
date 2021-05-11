@@ -51,6 +51,7 @@ input[type="submit"] {
   color: rgb(80, 80, 80);
   width: 40vw;
   margin: auto;
+  box-shadow: 1px 3px 15px rgb(213, 211, 211);
 }
 
 input[type="submit"]:hover {
@@ -259,6 +260,25 @@ button:hover {
     font-weight: 800;
     margin-left: 15px;
   }
+
+  .annonce,
+  .card-annonce,
+  .center-input {
+    /* border: 1px solid #ba0941; */
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    width: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  .form {
+    margin-top: 150px;
+  }
+  .card-annonce {
+    margin-bottom: 160px;
+  }
 }
 
 /*  *********************************************************** */
@@ -318,7 +338,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin-top: 100px;
+  margin-top: 10px;
   margin-bottom: 250px;
 }
 
@@ -326,20 +346,23 @@ button:hover {
   width: 100px;
   display: flex;
   margin: auto;
+  border-radius: 5px;
+  box-shadow: 1px 3px 15px rgb(213, 211, 211);
 }
 .label {
   /* background-color: aqua; */
   display: flex;
   justify-content: center;
   margin-bottom: 5px;
+  margin-top: 15px;
 }
 .card-annonce {
   /* border: 1px solid red; */
   display: flex;
   padding: 15px;
   flex-direction: column;
-  margin-top: 25px;
-  box-shadow: 1px 3px 15px rgb(213, 211, 211);
+  margin-top: 5px;
+  /* box-shadow: 1px 3px 15px rgb(213, 211, 211); */
 }
 .center {
   text-align: center;
@@ -429,6 +452,12 @@ button:hover {
   color: #7a1303ad;
   font-size: 18px;
   margin-top: 20px;
+}
+.form {
+  margin: auto;
+  /* border: 1px solid rgb(106, 56, 84); */
+  border-radius: 15px;
+  box-shadow: 1px 3px 15px rgb(213, 211, 211);
 }
 .header {
   display: flex;
