@@ -290,7 +290,7 @@ img,
 footer,
 h4,
 input {
-  -webkit-filter: saturate(1.4);
+  -webkit-filter: saturate(1.2);
 }
 .container {
   background-color: #d7dafc;
@@ -309,6 +309,7 @@ input {
   border: 1px solid #09b1ba;
   border-radius: 15px;
   background-color: white;
+  text-decoration: none;
 }
 .connecter {
   font-size: 18px;
@@ -319,6 +320,7 @@ input {
   border: 1px solid #7a1303ad;
   border-radius: 15px;
   background-color: white;
+  text-decoration: none;
 }
 .connecter-sub {
   font-size: 18px;
@@ -339,6 +341,7 @@ input {
   border: 1px solid #03297aad;
   border-radius: 15px;
   background-color: white;
+  text-decoration: none;
 }
 .annonce {
   display: flex;
