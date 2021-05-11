@@ -207,7 +207,7 @@ button:hover {
     color: #7a1303ad;
     margin: 15px;
     padding: 10px;
-    border: 1px solid #7a1303ad;
+    /* border: 1px solid #7a1303ad; */
     border-radius: 15px;
     background-color: white;
   }
