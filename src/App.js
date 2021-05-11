@@ -12,7 +12,7 @@ import Footer from "./components/Footer"; // Composant Footer commun à toutes l
 
 import Signup from "./containers/Signup"; // Composant Signup
 import Login from "./containers/Login"; // Composant Login
-import Publish from "./containers/Publish"; // Composants Publish
+// import Publish from "./containers/Publish"; // Composants Publish
 
 const App = () => {
   const [userToken, setUserToken] = useState(Cookies.get("userToken") || null);
@@ -44,6 +44,7 @@ const App = () => {
         <Route path="/login">
           <Login setUser={setUser} />
         </Route>
+
         <Route path="/">
           <Home />
         </Route>
