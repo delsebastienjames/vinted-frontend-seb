@@ -5,14 +5,14 @@ import "./index.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"; // BrowserRouter as Router permet de renommer BrowserRouter en (Route) // package npm
 
 import Cookies from "js-cookie"; // package npm
-import Home from "./containers/Home"; // Composant Home
-import Offer from "./containers/Offer"; // Composant Offer
+import Home from "./container/Home"; // Composant Home
+import Offer from "./container/Offer"; // Composant Offer
 import Header from "./components/Header"; // Composant Header commun à toutes les pages
 import Footer from "./components/Footer"; // Composant Footer commun à toutes les pages
 
-import Signup from "./containers/Signup"; // Composant Signup
-import Login from "./containers/Login"; // Composant Login
-// import Publish from "./containers/Publish"; // Composants Publish
+import Signup from "./container/Signup"; // Composant Signup
+import Login from "./container/Login"; // Composant Login
+import Publish from "./container/Publish"; // Composant Publish
 
 const App = () => {
   const [userToken, setUserToken] = useState(Cookies.get("userToken") || null);
@@ -44,7 +44,9 @@ const App = () => {
         <Route path="/login">
           <Login setUser={setUser} />
         </Route>
-
+        <Route path="/publish">
+          <Publish userToken={userToken} />
+        </Route>
         <Route path="/">
           <Home />
         </Route>
