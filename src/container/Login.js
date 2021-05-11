@@ -50,7 +50,12 @@ const Login = ({ setUser }) => {
           type="password"
         />
         <span>{errorMessage}</span>
-        <input className="connecter-sub" type="submit" value="Se connecter" />
+        <input
+          style={{ textDecoration: "none" }}
+          className="connecter-sub"
+          type="submit"
+          value="Se connecter"
+        />
       </form>
     </div>
   );
