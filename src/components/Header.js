@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 
 const Header = ({ userToken, setUser }) => {
   return (
@@ -18,6 +18,9 @@ const Header = ({ userToken, setUser }) => {
           </Link>
         </>
       )}
+      <Link className="articles" to="/publish">
+        Vends tes articles
+      </Link>
     </div>
   );
 };
