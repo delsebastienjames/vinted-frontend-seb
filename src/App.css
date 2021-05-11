@@ -35,12 +35,8 @@ textarea {
   background-color: #f0f0f000;
 }
 
-input {
-  height: 42px;
-}
-
 textarea {
-  height: 200px;
+  height: 150px;
 }
 
 input[type="submit"] {
@@ -338,11 +334,12 @@ button:hover {
   margin-bottom: 5px;
 }
 .card-annonce {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   padding: 15px;
   flex-direction: column;
   margin-top: 25px;
+  box-shadow: 1px 3px 15px rgb(213, 211, 211);
 }
 .center {
   text-align: center;
