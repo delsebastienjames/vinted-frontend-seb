@@ -14,6 +14,12 @@ import Signup from "./container/Signup"; // Composant Signup
 import Login from "./container/Login"; // Composant Login
 import Publish from "./container/Publish"; // Composant Publish
 
+// import { loadStripe } from "@stripe/stripe-js";
+// import { Elements } from "@stripe/react-stripe-js";
+// import CheckoutForm from "./components/checkoutForm";
+
+//const stripePromise = loadStripe(process.env.STRIPE_PUBLIC_KEY);
+
 const App = () => {
   const [userToken, setUserToken] = useState(Cookies.get("userToken") || null);
 
