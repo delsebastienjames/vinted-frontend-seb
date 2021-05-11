@@ -31,7 +31,8 @@ const Publish = ({ userToken }) => {
       formData.append("price", price);
 
       const response = await axios.post(
-        "https://my-backend-vinted-seb.herokuapp.com/user/publish",
+        // "https://my-backend-vinted-seb.herokuapp.com/user/publish",
+        "http://localhost:3000/offer/publish",
 
         formData,
         {
@@ -40,7 +41,7 @@ const Publish = ({ userToken }) => {
           },
         }
       );
-      //   console.log(response.data);
+      console.log(response.data);
       // Rediriger l'utilisateur vers la page de l'annonce postée
       if (response.data._id) {
         history.push(`/offer/${response.data._id}`);
