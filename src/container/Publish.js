@@ -8,7 +8,7 @@ const Publish = ({ userToken }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [marque, setMarque] = useState("");
-  const [taille, setTaille] = useState("");
+  const [format, setFormat] = useState("");
   const [color, setColor] = useState("");
   const [condition, setCondition] = useState("");
   const [city, setCity] = useState("");
@@ -24,7 +24,7 @@ const Publish = ({ userToken }) => {
       formData.append("title", title);
       formData.append("description", description);
       formData.append("marque", marque);
-      formData.append("taille", taille);
+      formData.append("format", format);
       formData.append("color", color);
       formData.append("condition", condition);
       formData.append("city", city);
@@ -95,8 +95,8 @@ const Publish = ({ userToken }) => {
             title="Taille"
             placeholder="ex: L"
             type="text"
-            value={taille}
-            setValue={setTaille}
+            value={format}
+            setValue={setFormat}
           />
           <Input
             title="Couleur"
