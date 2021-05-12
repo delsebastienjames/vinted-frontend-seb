@@ -1,42 +1,57 @@
 import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
 import axios from "axios";
+import Cookies from "js-cookie";
 import { useState } from "react";
 
-const CheckoutForm = () => {
+const CheckoutForm = ({ data }) => {
+  const [disabled, setDisabled] = useState(false);
+
   const stripe = useStripe();
   const elements = useElements();
-  const [successMessage, setSuccessMessage] = useState("");
+
+  const userId = Cookies.get("userId");
+  //   console.log(userId);
 
   const handleSubmit = async (event) => {
     try {
       event.preventDefault();
-      // Récupérer les données du formulaire
+      setDisabled(true);
+      // Récupérer les éléments de CardElement
       const cardElements = elements.getElement(CardElement);
-      // Envoyer ces données à l'API Stripe
+      // Requête à l'API Stripe pour obtenir un token
       const stripeResponse = await stripe.createToken(cardElements, {
-        name: "l'id de l'acheteur",
+        name: userId,
       });
+
       console.log(stripeResponse);
-      const stripeToken = stripeResponse.token.id;
+      // Requête au serveur pour créer la paiement
+      //const stripeToken = stripeResponse.token.id;
       // Envoyer le token au serveur
-      const response = await axios.post("http://localhost:3000/payment", {
-        stripeToken: stripeToken,
-      });
-      if (response.status === 200) {
-        setSuccessMessage("Paiement Validé");
+      const response = await axios.post(
+        "https://my-backend-vinted-seb.herokuapp.com/payment",
+        {
+          token: stripeResponse.token.id,
+          title: data.product_name,
+          amount: data.product_price,
+        }
+      );
+      if (response.status === "succeeded") {
+        // rediriger vers une page de confirmation
+        // history.push("/confirm")
       }
+      console.log(response.data);
     } catch (error) {
       console.log(error.message);
     }
   };
 
   return (
-    <div>
+    <div className="card-payment">
       <form onSubmit={handleSubmit}>
         <CardElement />
-        <input type="submit" />
+        {/* <input type="submit" value="Acheter" /> */}
+        <input type="submit" value="Acheter" disabled={disabled} />
       </form>
-      {successMessage}
     </div>
   );
 };
