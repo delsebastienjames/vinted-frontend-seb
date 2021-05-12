@@ -32,7 +32,6 @@ const Publish = ({ userToken }) => {
 
       const response = await axios.post(
         "https://my-backend-vinted-seb.herokuapp.com/offer/publish",
-        // http://localhost:3000/offer/publish",// cette route ne fonctionne pas
 
         formData,
         {
