@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom"; // useParams renvoie un object
+import { useParams } from "react-router-dom"; // useParams renvoie un object
+// import { useParams, Link } from "react-router-dom"; // useParams renvoie un object
 import axios from "axios";
 
 const Offer = () => {
@@ -54,7 +55,7 @@ const Offer = () => {
           </p>
         );
       })}
-      <Link
+      {/* <Link
         className="acheter"
         to={{
           pathname: "/payment",
@@ -62,7 +63,7 @@ const Offer = () => {
         }}
       >
         Acheter
-      </Link>
+      </Link> */}
     </div>
   );
 };
