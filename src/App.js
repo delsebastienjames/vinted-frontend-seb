@@ -13,7 +13,7 @@ import Footer from "./components/Footer"; // Composant Footer commun à toutes l
 import Signup from "./container/Signup"; // Composant Signup
 import Login from "./container/Login"; // Composant Login
 import Publish from "./container/Publish"; // Composant Publish
-//import Payment from "./container/Payment"; // Composant Payment
+import Payment from "./container/Payment"; // Composant Payment
 
 const App = () => {
   const [userToken, setUserToken] = useState(Cookies.get("userToken") || null);
@@ -50,9 +50,9 @@ const App = () => {
         <Route path="/publish">
           <Publish userToken={userToken} />
         </Route>
-        {/* <Route path="/payment">
+        <Route path="/payment">
           <Payment />
-        </Route> */}
+        </Route>
         <Route path="/">
           <Home />
         </Route>
