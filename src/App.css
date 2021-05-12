@@ -209,6 +209,16 @@ button:hover {
     background-color: white;
   }
 
+  .acheter {
+    font-size: 16px;
+    font-family: "Times New Roman", Times, serif;
+    color: #094aba;
+    margin: 15px;
+    padding: 10px;
+    border: 1px solid #094aba;
+    border-radius: 15px;
+    background-color: white;
+  }
   .form-inscrire {
     border: 1px solid #09b1ba;
     background-color: rgb(255, 255, 255);
@@ -326,6 +336,28 @@ button:hover {
   /* border: 1px solid #7a1303ad; */
   border-radius: 15px;
   background-color: white;
+}
+.acheter {
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
+  color: #ba8209;
+  margin: 15px;
+  padding: 10px;
+  border: 1px solid #ba8209;
+  border-radius: 15px;
+  background-color: white;
+  text-decoration: none;
+}
+.card-payment {
+  margin: auto;
+  width: 42vw;
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  line-height: 50px;
 }
 .articles {
   font-size: 18px;
