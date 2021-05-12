@@ -4,7 +4,7 @@ import axios from "axios";
 import { Link } from "react-router-dom"; // permet de rendre clickable
 
 const Home = () => {
-  const [data, setData] = useState({});
+  const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
