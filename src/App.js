@@ -13,12 +13,7 @@ import Footer from "./components/Footer"; // Composant Footer commun à toutes l
 import Signup from "./container/Signup"; // Composant Signup
 import Login from "./container/Login"; // Composant Login
 import Publish from "./container/Publish"; // Composant Publish
-
-// import { loadStripe } from "@stripe/stripe-js";
-// import { Elements } from "@stripe/react-stripe-js";
-// import CheckoutForm from "./components/checkoutForm";
-
-//const stripePromise = loadStripe(process.env.STRIPE_PUBLIC_KEY);
+import Payment from "./container/Payment"; // Composant Payment
 
 const App = () => {
   const [userToken, setUserToken] = useState(Cookies.get("userToken") || null);
@@ -27,12 +22,14 @@ const App = () => {
   // 1 - Créer ou supprimer le Cookie contenant le token
   // 2 - Modifier l'état userToken dans le but de rafraîchir Header
 
-  const setUser = (token) => {
+  const setUser = (token, id) => {
     if (token) {
       Cookies.set("userToken", token, { expires: 10 });
+      Cookies.set("userId", id);
       setUserToken(token);
     } else {
       Cookies.remove("userToken");
+      Cookies.remove("userId");
       setUserToken(null);
     }
   };
@@ -52,6 +49,9 @@ const App = () => {
         </Route>
         <Route path="/publish">
           <Publish userToken={userToken} />
+        </Route>
+        <Route path="/payment">
+          <Payment />
         </Route>
         <Route path="/">
           <Home />
