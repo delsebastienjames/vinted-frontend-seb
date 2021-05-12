@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom"; // useParams renvoie un object
+import { useParams, Link } from "react-router-dom"; // useParams renvoie un object
 import axios from "axios";
 
 const Offer = () => {
@@ -23,7 +23,7 @@ const Offer = () => {
       }
     };
     fetchData();
-  }, [id]);
+  }, []);
   // Ternaire
   return isLoading ? (
     <p>En cours de chargement...</p>
@@ -54,6 +54,15 @@ const Offer = () => {
           </p>
         );
       })}
+      <Link
+        className="acheter"
+        to={{
+          pathname: "/payment",
+          state: { data: data },
+        }}
+      >
+        Acheter
+      </Link>
     </div>
   );
 };
