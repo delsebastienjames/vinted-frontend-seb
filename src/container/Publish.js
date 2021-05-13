@@ -65,7 +65,7 @@ const Publish = ({ userToken }) => {
           onChange={(event) => setPicture(event.target.files[0])}
         />
         <span className="litle-picture">
-          {picture && <img src={URL.createObjectURL(picture)} />}
+          {picture && <img src={URL.createObjectURL(picture)} alt="" />}
         </span>
 
         <br />
