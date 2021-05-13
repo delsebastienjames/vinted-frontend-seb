@@ -48,9 +48,9 @@ const CheckoutForm = ({ data }) => {
   return (
     <div className="card-payment">
       <form onSubmit={handleSubmit}>
-        <p className="visa">
+        <span className="visa">
           <CardElement />
-        </p>
+        </span>
 
         {/* <input type="submit" value="Acheter" /> */}
         <input type="submit" value="Acheter" disabled={disabled} />
