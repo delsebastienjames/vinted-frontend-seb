@@ -33,6 +33,7 @@ const Home = () => {
           <Link
             style={{ textDecoration: "none" }}
             key={offer._id}
+            offer={offer}
             to={`/offer/${offer._id}`}
           >
             <div className="main">
