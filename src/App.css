@@ -291,6 +291,15 @@ button:hover {
   .card-annonce {
     margin-bottom: 160px;
   }
+  .visa {
+    background-color: rgba(144, 227, 242, 0.297);
+    margin: 15px auto 25px;
+    width: 250px;
+    border: 1px solid #0932ba;
+    height: 150px;
+    padding: 15px;
+    border-radius: 15px;
+  }
 }
 
 /* *********************************************************** */
