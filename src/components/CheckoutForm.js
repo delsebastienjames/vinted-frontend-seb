@@ -5,12 +5,13 @@ import { useState } from "react";
 
 const CheckoutForm = ({ data }) => {
   const [disabled, setDisabled] = useState(false);
+  const [completed, setCompleted] = useState(false);
 
   const stripe = useStripe();
   const elements = useElements();
 
   const userId = Cookies.get("userId");
-  //   console.log(userId);
+  //console.log(userId);
 
   const handleSubmit = async (event) => {
     try {
@@ -25,7 +26,7 @@ const CheckoutForm = ({ data }) => {
 
       //console.log(stripeResponse);
       // Requête au serveur pour créer le paiement
-      //const stripeToken = stripeResponse.token.id;
+      // const stripeToken = stripeResponse.token.id;
       // Envoyer le token au serveur
       const response = await axios.post(
         "https://my-backend-vinted-seb.herokuapp.com/payment",
@@ -35,25 +36,32 @@ const CheckoutForm = ({ data }) => {
           amount: data.product_price,
         }
       );
-      if (response.status === "succeeded") {
+      //console.log(response.data);
+      if (response.data.status === "succeeded") {
         // rediriger vers une page de confirmation
-        //history.push("/confirm");
+        setCompleted(true);
       }
-      console.log(response.data);
+      //console.log(response.data);
     } catch (error) {
-      console.log(error.message);
+      //console.log(error.message);
     }
   };
 
   return (
-    <div className="card-payment">
-      <form onSubmit={handleSubmit}>
-        <div className="visa">
-          <CardElement />
+    <>
+      {!completed ? (
+        <div className="card-payment">
+          <form onSubmit={handleSubmit}>
+            <div className="visa">
+              <CardElement />
+            </div>
+            <input type="submit" value="Acheter" disabled={disabled} />
+          </form>
         </div>
-        <input type="submit" value="Acheter" disabled={disabled} />
-      </form>
-    </div>
+      ) : (
+        <span>Paiement effectué ! </span>
+      )}
+    </>
   );
 };
 
