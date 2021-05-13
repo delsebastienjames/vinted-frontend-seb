@@ -23,9 +23,9 @@ const CheckoutForm = ({ data }) => {
         name: userId,
       });
 
-      console.log(stripeResponse);
-      // Requête au serveur pour créer la paiement
-      //const stripeToken = stripeResponse.token.id;
+      //console.log(stripeResponse);
+      // Requête au serveur pour créer le paiement
+      const stripeToken = stripeResponse.token.id;
       // Envoyer le token au serveur
       const response = await axios.post(
         "https://my-backend-vinted-seb.herokuapp.com/payment",
@@ -37,7 +37,7 @@ const CheckoutForm = ({ data }) => {
       );
       if (response.status === "succeeded") {
         // rediriger vers une page de confirmation
-        // history.push("/confirm")
+        //history.push("/confirm");
       }
       console.log(response.data);
     } catch (error) {
@@ -48,9 +48,9 @@ const CheckoutForm = ({ data }) => {
   return (
     <div className="card-payment">
       <form onSubmit={handleSubmit}>
-        <span className="visa">
+        <div className="visa">
           <CardElement />
-        </span>
+        </div>
 
         {/* <input type="submit" value="Acheter" /> */}
         <input type="submit" value="Acheter" disabled={disabled} />
