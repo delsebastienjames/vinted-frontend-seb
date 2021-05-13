@@ -1,4 +1,5 @@
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
+// import { Link, Redirect } from "react-router-dom";
 
 const Header = ({ userToken, setUser }) => {
   return (
