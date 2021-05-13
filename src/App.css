@@ -356,7 +356,7 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 25px;
+  margin-top: -15px;
   line-height: 50px;
 }
 .visa {
@@ -364,7 +364,7 @@ button:hover {
   margin: 10px;
   margin: auto;
   margin-top: 45px;
-  margin-bottom: 45px;
+  margin-bottom: 25px;
   width: 300px;
   border: 1px solid #0932ba;
   height: 150px;
