@@ -51,8 +51,6 @@ const CheckoutForm = ({ data }) => {
         <div className="visa">
           <CardElement />
         </div>
-
-        {/* <input type="submit" value="Acheter" /> */}
         <input type="submit" value="Acheter" disabled={disabled} />
       </form>
     </div>
