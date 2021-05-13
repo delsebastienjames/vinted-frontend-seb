@@ -10,7 +10,7 @@ const CheckoutForm = ({ data }) => {
   const elements = useElements();
 
   const userId = Cookies.get("userId");
-  //console.log(userId);
+  // console.log(userId);
 
   const handleSubmit = async (event) => {
     try {
