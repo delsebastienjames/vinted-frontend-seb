@@ -72,6 +72,7 @@ const Publish = ({ userToken }) => {
         <br />
         <div className="card-annonce">
           <textarea
+            className="description"
             value={description}
             onChange={(event) => setDescription(event.target.value)}
             cols="30"
