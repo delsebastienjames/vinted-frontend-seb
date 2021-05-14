@@ -316,7 +316,7 @@ button:hover {
   }
   .description {
     /* background-color: chartreuse; */
-    width: 36vw;
+    width: auto;
   }
 }
 
@@ -445,11 +445,11 @@ button:hover {
 }
 .description {
   /* background-color: chartreuse; */
-  width: 36vw;
+  /* width: 36vw; */
 }
 .parcourir {
   /* background-color: brown; */
-  width: 36vw;
+  width: auto;
   font-size: 12px;
 }
 .center {
