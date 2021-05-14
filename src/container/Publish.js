@@ -60,6 +60,7 @@ const Publish = ({ userToken }) => {
         </label>
 
         <input
+          className="parcourir"
           id="file"
           type="file"
           onChange={(event) => setPicture(event.target.files[0])}
