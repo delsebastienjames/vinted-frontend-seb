@@ -304,7 +304,7 @@ button:hover {
   }
   .parcourir {
     /* background-color: brown; */
-    width: 36vw;
+    width: 42vw;
     font-size: 12px;
   }
   .label {
@@ -313,6 +313,10 @@ button:hover {
     justify-content: center;
     margin-bottom: 10px;
     margin-top: 15px;
+  }
+  .description {
+    /* background-color: chartreuse; */
+    width: 36vw;
   }
 }
 
