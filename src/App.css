@@ -274,7 +274,6 @@ button:hover {
   }
 
   .annonce,
-  .card-annonce,
   .center-input {
     /* border: 1px solid #ba0941; */
     background-color: rgb(255, 255, 255);
@@ -304,8 +303,16 @@ button:hover {
     border-radius: 15px;
   }
   .parcourir {
-    background-color: brown;
-    width: 48vw;
+    /* background-color: brown; */
+    width: 36vw;
+    font-size: 12px;
+  }
+  .label {
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-top: 15px;
   }
 }
 
@@ -419,13 +426,10 @@ button:hover {
   /* background-color: aqua; */
   display: flex;
   justify-content: center;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   margin-top: 15px;
 }
-.parcourir {
-  /* background-color: brown; */
-  width: 48vw;
-}
+
 .card-annonce {
   /* border: 1px solid red; */
   display: flex;
@@ -434,6 +438,15 @@ button:hover {
   margin-top: 5px;
   /* box-shadow: 1px 3px 15px rgb(213, 211, 211); */
   margin-top: -25px;
+}
+.description {
+  /* background-color: chartreuse; */
+  width: 36vw;
+}
+.parcourir {
+  /* background-color: brown; */
+  width: 36vw;
+  font-size: 12px;
 }
 .center {
   text-align: center;
