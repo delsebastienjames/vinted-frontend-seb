@@ -303,6 +303,10 @@ button:hover {
     padding: 15px;
     border-radius: 15px;
   }
+  .parcourir {
+    background-color: brown;
+    width: 48vw;
+  }
 }
 
 /* *********************************************************** */
@@ -417,6 +421,10 @@ button:hover {
   justify-content: center;
   margin-bottom: 5px;
   margin-top: 15px;
+}
+.parcourir {
+  /* background-color: brown; */
+  width: 48vw;
 }
 .card-annonce {
   /* border: 1px solid red; */
