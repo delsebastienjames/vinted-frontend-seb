@@ -37,12 +37,12 @@ const CheckoutForm = ({ data }) => {
           token: stripeResponse.token.id,
         }
       );
-      //console.log(response.data);
-      if (response.data.status === "succeeded") {
-        // rediriger vers une page de confirmation
-        alert("ok");
-      }
-      console.log(response.data);
+      console.log(response);
+      // if (response.data.status === "succeeded") {
+      //   // rediriger vers une page de confirmation
+      //   alert("ok");
+      // }
+      // console.log(response.data);
     } catch (error) {
       // console.log(error.message);
       console.log(error.response);
