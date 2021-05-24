@@ -24,7 +24,7 @@ const Offer = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [id]);
   // Ternaire
   return isLoading ? (
     <p>En cours de chargement...</p>
