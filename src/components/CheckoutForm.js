@@ -10,7 +10,7 @@ const CheckoutForm = ({ data }) => {
   const elements = useElements();
 
   const userId = Cookies.get("userId");
-  console.log(userId);
+  //console.log(userId);
 
   const handleSubmit = async (event) => {
     try {
@@ -26,7 +26,7 @@ const CheckoutForm = ({ data }) => {
 
       //console.log(stripeResponse);
       // Requête au serveur pour créer le paiement
-      const stripeToken = stripeResponse.token.id;
+      //const stripeToken = stripeResponse.token.id;
       // Envoyer le token au serveur
       const response = await axios.post(
         "https://my-backend-vinted-seb.herokuapp.com/payment",
@@ -34,7 +34,7 @@ const CheckoutForm = ({ data }) => {
           token: stripeResponse.token.id,
           title: data.product_name,
           amount: data.product_price,
-          source: stripeToken,
+          //source: stripeToken,
         }
       );
       console.log(response.data);
