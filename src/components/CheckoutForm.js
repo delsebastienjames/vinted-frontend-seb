@@ -26,15 +26,15 @@ const CheckoutForm = ({ data }) => {
 
       //console.log(stripeResponse);
       // Requête au serveur pour créer le paiement
-      const stripeToken = stripeResponse.token.id;
+      //const stripeToken = stripeResponse.token.id;
       // Envoyer le token au serveur
       const response = await axios.post(
         "https://my-backend-vinted-seb.herokuapp.com/payment",
         {
-          token: stripeResponse.token.id,
+          // token: stripeResponse.token.id,
           title: data.product_name,
           amount: data.product_price,
-          source: stripeToken,
+          token: stripeResponse.token.id,
         }
       );
       //console.log(response.data);
