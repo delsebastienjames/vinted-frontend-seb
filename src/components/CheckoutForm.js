@@ -31,11 +31,10 @@ const CheckoutForm = ({ data }) => {
       const response = await axios.post(
         "https://my-backend-vinted-seb.herokuapp.com/payment",
         {
-          token: stripeToken,
-          // token: stripeResponse.token.id,
+          token: stripeResponse.token.id,
           title: data.product_name,
           amount: data.product_price,
-          //source: stripeToken,
+          source: stripeToken,
         }
       );
       //console.log(response.data);
