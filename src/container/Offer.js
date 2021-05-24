@@ -3,11 +3,11 @@ import { useParams, Link } from "react-router-dom"; // useParams renvoie un obje
 import axios from "axios";
 
 const Offer = () => {
-  const { id } = useParams(); // destructuring
-  console.log(id);
-
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
+
+  const { id } = useParams(); // destructuring
+  console.log(id);
 
   useEffect(() => {
     const fetchData = async () => {
