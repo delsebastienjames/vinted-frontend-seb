@@ -1,7 +1,7 @@
+import { useState } from "react";
 import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
 import axios from "axios";
 import Cookies from "js-cookie";
-import { useState } from "react";
 
 const CheckoutForm = ({ data }) => {
   const [disabled, setDisabled] = useState(false);
