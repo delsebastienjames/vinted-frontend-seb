@@ -10,7 +10,7 @@ const CheckoutForm = ({ data }) => {
   const elements = useElements();
 
   const userId = Cookies.get("userId");
-  // console.log(userId);
+  console.log(userId);
 
   const handleSubmit = async (event) => {
     try {
@@ -34,9 +34,10 @@ const CheckoutForm = ({ data }) => {
           token: stripeResponse.token.id,
           title: data.product_name,
           amount: data.product_price,
+          //source: stripeToken,
         }
       );
-      //console.log(response.data);
+      console.log(response.data);
       if (response.data.status === "succeeded") {
         // rediriger vers une page de confirmation
       }
