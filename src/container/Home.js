@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import picture from "../assets/img/home.jpg";
 
 import { Link } from "react-router-dom"; // permet de rendre clickable
 
@@ -27,6 +28,9 @@ const Home = () => {
     <p>En cours de chargement ...</p>
   ) : (
     <div>
+      <div>
+        <img src={picture} alt="womens" className="home-picture" />
+      </div>
       {data.results.map((offer) => {
         // key très important (enlève également un warning du au .map)
         return (
