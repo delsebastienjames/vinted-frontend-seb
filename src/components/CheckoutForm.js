@@ -26,7 +26,7 @@ const CheckoutForm = ({ data }) => {
 
       //console.log(stripeResponse);
       // Requête au serveur pour créer le paiement
-      //const stripeToken = stripeResponse.token.id;
+      // const stripeToken = stripeResponse.token.id;
       // Envoyer le token au serveur
       const response = await axios.post(
         "https://my-backend-vinted-seb.herokuapp.com/payment",
@@ -37,7 +37,8 @@ const CheckoutForm = ({ data }) => {
         }
       );
       console.log(response);
-      if (response.data.status === "succeeded") {
+      if (response.data === "succeeded") {
+        // if (response.data.status === "succeeded") {
         // rediriger vers une page de confirmation
         alert("ok");
       }
