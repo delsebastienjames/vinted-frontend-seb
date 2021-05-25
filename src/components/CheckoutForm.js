@@ -3,7 +3,7 @@ import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
 import axios from "axios";
 import Cookies from "js-cookie";
 
-const CheckoutForm = ({ product_name, product_price }) => {
+const CheckoutForm = ({ data }) => {
   // const [disabled, setDisabled] = useState(false);
 
   const stripe = useStripe();
@@ -31,17 +31,17 @@ const CheckoutForm = ({ product_name, product_price }) => {
       const response = await axios.post(
         "https://my-backend-vinted-seb.herokuapp.com/payment",
         {
-          title: product_name,
-          amount: product_price,
+          title: data.product_name,
+          amount: data.product_price,
           token: stripeResponse.token.id,
         }
       );
       // console.log(response);
 
-      // if (response.data.status === "succeeded") {
-      //   // rediriger vers une page de confirmation
-      //   alert("ok");
-      // }
+      if (response.data.status === "succeeded") {
+        // rediriger vers une page de confirmation
+        alert("ok");
+      }
       console.log(response.data);
     } catch (error) {
       // console.log(error.message);
