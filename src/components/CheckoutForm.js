@@ -40,7 +40,7 @@ const CheckoutForm = ({ data }) => {
 
       if (response.data.status === "succeeded") {
         // rediriger vers une page de confirmation
-        alert("ok");
+        alert("Votre paiement a bien été pris en compte");
       }
       console.log(response.data);
     } catch (error) {
