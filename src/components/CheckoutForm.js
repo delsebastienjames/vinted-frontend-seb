@@ -1,10 +1,10 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
 import axios from "axios";
 import Cookies from "js-cookie";
 
-const CheckoutForm = ({ data }) => {
-  const [disabled, setDisabled] = useState(false);
+const CheckoutForm = ({ product_name, product_price }) => {
+  // const [disabled, setDisabled] = useState(false);
 
   const stripe = useStripe();
   const elements = useElements();
@@ -15,7 +15,7 @@ const CheckoutForm = ({ data }) => {
   const handleSubmit = async (event) => {
     try {
       event.preventDefault();
-      setDisabled(true);
+      // setDisabled(true);
 
       // Récupérer les éléments de CardElement
       const cardElements = elements.getElement(CardElement);
@@ -31,17 +31,17 @@ const CheckoutForm = ({ data }) => {
       const response = await axios.post(
         "https://my-backend-vinted-seb.herokuapp.com/payment",
         {
-          title: data.product_name,
-          amount: data.product_price,
+          title: product_name,
+          amount: product_price,
           token: stripeResponse.token.id,
         }
       );
-      console.log(response);
-      if (response.data === "succeeded") {
-        // if (response.data.status === "succeeded") {
-        // rediriger vers une page de confirmation
-        alert("ok");
-      }
+      // console.log(response);
+
+      // if (response.data.status === "succeeded") {
+      //   // rediriger vers une page de confirmation
+      //   alert("ok");
+      // }
       console.log(response.data);
     } catch (error) {
       // console.log(error.message);
@@ -55,7 +55,8 @@ const CheckoutForm = ({ data }) => {
         <div className="visa">
           <CardElement />
         </div>
-        <input type="submit" value="Acheter" disabled={disabled} />
+        <input type="submit" value="Acheter" />
+        {/* <input type="submit" value="Acheter" disabled={disabled} /> */}
       </form>
     </div>
   );
