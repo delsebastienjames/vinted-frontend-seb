@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
 import axios from "axios";
 import Cookies from "js-cookie";
 
 const CheckoutForm = ({ data }) => {
+  const [goodMessage, setGoodMessage] = useState("");
   const stripe = useStripe();
   const elements = useElements();
 
@@ -37,7 +39,9 @@ const CheckoutForm = ({ data }) => {
 
       if (response.data.status === "succeeded") {
         // rediriger vers une page de confirmation
-        alert("Votre paiement a bien été pris en compte");
+        setGoodMessage("Votre paiement a bien été pris en compte");
+
+        // alert("Votre paiement a bien été pris en compte");
       }
       console.log(response.data);
     } catch (error) {
@@ -52,6 +56,7 @@ const CheckoutForm = ({ data }) => {
         <div className="visa">
           <CardElement />
         </div>
+        <p className="message">{goodMessage}</p>
         <input type="submit" value="Acheter" />
       </form>
     </div>
