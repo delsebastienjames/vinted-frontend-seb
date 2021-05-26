@@ -28,9 +28,7 @@ const Home = () => {
     <p>En cours de chargement ...</p>
   ) : (
     <div>
-      <div>
-        <img src={picture} alt="womens" className="home-picture" />
-      </div>
+      <img src={picture} alt="womens" className="home-picture" />
       {data.results.map((offer) => {
         // key très important (enlève également un warning du au .map)
         return (
