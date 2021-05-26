@@ -10,6 +10,9 @@
   --vinted-color: #09b1ba;
 }
 
+html {
+  background-color: #ffffff;
+}
 button {
   font-family: "Times New Roman", Times, serif;
 }
@@ -578,7 +581,6 @@ button:hover {
 .home-picture {
   background-image: url("../src/assets/img/home.jpg");
   width: 100vw;
-  height: 100vh;
 }
 
 .footer {
