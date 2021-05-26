@@ -576,8 +576,9 @@ button:hover {
 }
 
 .home-picture {
-  margin: auto;
+  background-image: url("../src/assets/img/home.jpg");
   width: 100vw;
+  height: 100vh;
 }
 
 .footer {
